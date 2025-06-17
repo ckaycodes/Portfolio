@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chan</title>
+  <link href="resources/css/index.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> <!-- Google Fonts: Inter -->
+
+</head>
+
+<body>
+
+<!-- Logo icons in top right corner -->
+ <div class="logo-image">
+    <a href="https://www.linkedin.com/in/chandler-cook101/" target="_blank">
+      <img src="resources/images/LinkedIn-Square-White-Icon-Transparent-PNG-500x500-1.png" alt="LinkedIn logo">
+    </a>
+    <a href="https://github.com/ckaycodes" target="_blank">
+      <img src="resources/images/github.png" alt="GitHub logo">
+    </a>
+  </div>
+
+  <!--Flexbox that holds the two sections on screen-->
+  <div class = "container">
+<!--Header Text-->
+<div class="left-side">
+  <div class = "header"> 
+      <h1>Chandler Cook</h1>
+      <h4>Computer Science Student</h4>
+
+
+    <div class = "table-of-contents">
+        <a href="#about" id="scrollTopBtn" class="toc-link">About</a>
+        <a href = "#experience" class="toc-link">Experience</a>
+        <a href = "#projects" class="toc-link">Projects</a>
+    </div>
+  </div>
+</div>
+
+  <!--Right Portion of Screen-->
+  <div class = "right-side"> 
+  <div class = "about-section">
+    <p id = "about"> I’m an aspiring student who wants to make a real impact by building solid, reliable software. 
+      Outside of class, I’m often building Java projects and applying design patterns to write more maintainable and scalable code.
+      Recently, I've been devoting more time to my craft and can’t wait to share my progress with you here. </p>
+
+    <p>While working toward my degree in Computer Science at Irvine Valley College, I always try to find tech-related opportunities. 
+      One ongoing conversation on campus is Artificial Intelligence and how to incorporate it safely within the curriculum. This past semester, I wrote a
+      <a href="resources/Public_ Chandler Cook - Writing Alongside AI.pdf" download>research paper</a> focused on AI and college writing courses,
+      as I believe writing is one of the subjects most heavily impacted by AI. Additionally, I enjoy contributing to AI task forces around campus and hope to present 
+      at the <a href="https://www.ivc.edu/honors/symposium" target="_blank">IVC/Saddleback Student Research Symposium</a> this fall.</p>
+
+    <p>In my free time, I enjoy reading, practicing martial arts, working as a barista, working on my '73 VW, and playing video games (Sifu!).</p>
+  </div>
+
+    <!--Experience Section -->
+    <div class="experience-section">
+      <a href ="https://philzcoffee.com/" target="_blank">
+      <div class = "experience-entry">
+      <div class = "job-time"><h4 id = "experience">2023 - PRESENT</h4></div>
+      <div class = "job-details">
+        <h4>Philz Coffee</h4>
+        <p> I get to connect with people while crafting custom coffee blends. It's a fast-paced environment 
+          that's taught me a lot about teamwork, customer service, and attention to detail. Plus, I get to enjoy some of the best coffee around every day.</p>
+      </div>
+      </a>
+      </div>
+
+      <div class = "experience-entry"> 
+      <div class = "job-time"><h4>JUN 2025 - Present</h4></div>
+      <div class = "job-details">
+        <h4>Member - IVC AI Task Force</h4>
+        <p>Participated in discussions about integrating AI in curriculum. Helped draft ethical guidelines and represented student voice.</p>
+      </div>
+      </div>
+
+      <div class = "experience-entry"> 
+      <div class = "job-time"><h4>Spring 2024</h4></div>
+      <div class = "job-details">
+        <h4>Student Researcher - AI in Education</h4>
+        <p>Wrote a paper on the impact of generative AI on college writing. Engaged in academic research and cited contemporary sources.</p>
+      </div>
+    </div>
+
+      <div class = "experience-entry"> 
+      <div class = "job-time"><h4>Spring 2024 - Present</h4></div>
+      <div class = "job-details">
+        <h4>Tutor - Mathematics</h4>
+        <p>Tutoring levels from 7th grade math, to assisting classmates with Calculus 2 concepts</p>
+      </div>
+      </div>
+    </div>
+    
+
+
+    <div class = project-section> 
+      <a href = "https://github.com/ckaycodes/BankingApp" target ="_blank">
+      <div class = "project-entry" id = "projects">
+        <img src = "resources/images/452184130-341abf91-8608-4e38-a7d8-4b5c52f3fa57.png" alt = "Cover Image of Bank Project"/>
+        <div class = "project-details"><h4>Java Banking App</h4>
+        <p>A simple desktop banking application built with Java and JavaFX.
+          This project simulates basic banking functionality, such as account creation, login, and transaction management, 
+          all wrapped in a clean UI with a cozy coffee-themed logo.</p>
+          </div>
+      </div>
+      </a>
+
+    <div class = "footer-gag"> 
+      <img src = "resources/images/4771252.png" alt = "loading bar">
+    </div>
+    
+    </div>
+
+  </div>
+ </div>
+
+
+
+
+
+<!-- Simple JS for smooth scrolling animation-->
+<script>
+  document.querySelectorAll('.toc-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const targetId = link.getAttribute('href').substring(1); // remove "#"
+      const targetSection = document.getElementById(targetId);
+      const scrollContainer = document.querySelector('.right-side');
+
+      if (targetSection && scrollContainer) { // Just a safety check to make sure both elements exist before trying to scroll.
+        const topOffset = targetSection.offsetTop - scrollContainer.offsetTop;
+
+        scrollContainer.scrollTo({
+          top: topOffset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+
+
+</body>
+
+</html>
