@@ -131,13 +131,12 @@ html, body {
   -ms-overflow-style: none;  /* For IE and Edge */
 }
 
-
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .right-side::-webkit-scrollbar {
   display: none;
 }
 
+/* Right Side / About Section */
 .right-side p { 
   color: white; 
   font-family: 'Poppins', sans-serif;
@@ -149,8 +148,38 @@ html, body {
   text-decoration: none;
 }
 
+.about-section a { 
+  color: rgb(142, 139, 206);
+  text-decoration: none;
+}
+
 .about-section a:hover { 
   background-color: rgb(37, 14, 58);
+}
+
+.sifu-text { 
+  color: rgb(142, 139, 206);
+}
+
+.sifu-text:hover { 
+  cursor: url("../images/eff304d9-c0b7-4c43-bd3d-b3ec35a86fd8\(2\).png") 0 0, auto;
+  background-color: transparent !important;
+}
+
+/* prevent hover-styling used on the previous anchor tags */
+.about-section a.no-bg-hover:hover {
+  background-color: transparent;
+}
+
+.sifu-text span {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transition-delay: calc(var(--i) * 0.05s);
+}
+
+.sifu-text:hover span {
+  transform: translateY(-5px);
+  color: red;
 }
 
  .experience-entry {
@@ -176,7 +205,7 @@ html, body {
 }
 
 .experience-entry:hover h4 {
-  color: rgb(90, 176, 198);
+  color: rgb(142, 139, 206);
 }
 
 .experience-entry h4 {
@@ -222,7 +251,7 @@ html, body {
 }
 
 .project-entry:hover h4 {
-  color: rgb(90, 176, 198);
+  color: rgb(142, 139, 206);
 }
 
 .project-entry h4 {
